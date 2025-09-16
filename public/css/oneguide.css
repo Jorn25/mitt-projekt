@@ -36,7 +36,7 @@ p{
     text-decoration: underline;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1090px) {
 .siteheader nav a {
     text-decoration: none;
     color: #f8f8f8;
