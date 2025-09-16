@@ -113,6 +113,18 @@ p{
 width: 100%;
 height: 500px;
 }
+
+@media (max-width: 800px) {
+  .kartaunder {
+    flex-direction: column;
+  }
+
+  .karta {
+    width: 100%;   /* Säkerställer att båda tar full bredd */
+  }
+}
+
+
 /*Nu slutar koden för kartan och "hitta hit texten"*/
 
 /*Här är koden för de tre kolumnerna*/
@@ -128,9 +140,15 @@ h4{
 
 
 @media (max-width: 800px) {
- .cols3 { flex-wrap: wrap; }
- .content { flex: 1 1 100%; text-align: center; }
+  .tre {
+    flex-direction: column;
+  }
+
+  .trevarde {
+    width: 100%;   /* Säkerställer att båda tar full bredd */
+  }
 }
+
 
 
 /*Här slutar koden för de tre kolumnerna*/
@@ -149,6 +167,17 @@ h4{
 .fyrakollumner{
     background-color: var(--color-main-bg) !important;
 }
+
+@media (max-width: 800px) {
+  .mytologin {
+    flex-direction: column;
+  }
+
+  .fyrakollumner {
+    width: 100%;   /* Säkerställer att båda tar full bredd */
+  }
+}
+
 /*Här slutar koden för de fyra kollumnerna */
 
 /*Här kommer koden för de skrollbara kollumnerna */
@@ -157,7 +186,7 @@ h4{
 }
 
 .scroll .col {
-  min-width: 45%;
+  min-width: 50%;
 }
 /*Här slutar koden för de skrollbara kollumnerna */
 
