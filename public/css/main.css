@@ -1,0 +1,26 @@
+
+
+.wrap {
+  display: flex;    /* Enables Flexbox layout */
+  flex-wrap: wrap;  /* Allows items to wrap onto the next line if needed */
+  gap: 0.5rem;        /* Adds spacing between child elements */
+}
+
+.main {
+  flex: 3;          /* Allocates 3 parts of available space to the main area */
+}
+
+
+/**
+ * Add colors for visibility of the areas.
+ */
+.wrap {
+  background-color: white; /* White */
+}
+
+.main {
+  padding: 1rem;                /* Adds space inside the main area */
+  border-radius: 8px;           /* Rounds the corners of the main area */
+   background-color: #c9c9c9;
+}
+

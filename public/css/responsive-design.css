@@ -1,0 +1,133 @@
+/* Header as a flex container with two columns */
+.siteheader {
+  justify-content: space-between; /* Space between left and right columns */
+  align-items: center;            /* Vertically center items */
+  padding: 10px 20px;             /* Add some padding */
+}
+
+/* Right column - navigation bar */
+.navbar {
+  position: relative;              /* Optional: needed if dropdown uses absolute positioning */
+}
+
+/* Navigation links displayed in a row */
+.nav-links {
+  list-style: none;                /* Remove bullets */
+  display: flex;                   /* Display links in a row */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;               /* Space between links */
+}
+
+/* Hamburger menu button */
+.menu-toggle {
+  display: none;                   /* Hidden by default */
+  background: none;                /* No background */
+  border: none;                    /* No border */
+  font-size: 1.8em;                /* Bigger font for hamburger icon */
+  color: rgb(0, 0, 0);             /* Black color */
+  cursor: pointer;                 /* Pointer cursor on hover */
+}
+
+/* Responsive styles: when screen is smaller than 800px */
+@media (max-width: 1090px) {
+  .menu-toggle {
+    display: block;                /* Show hamburger button on small screens */
+  }
+
+  .nav-links {
+    display: none;                 /* Hide links by default */
+    flex-direction: column;        /* Stack links vertically */
+    position: fixed;               /* Fixed to the screen */
+    top: 70px;                        /* Start at top */
+    left: 0;                       /* Start at left */
+    width: 100%;                   /* Full width */
+    height: 100vh;                 /* Full height of viewport */
+        background-color: rgba(0, 0, 0, 0); /* genomskinlig grön */
+    backdrop-filter: blur(8px);    /* gör bakgrunden suddig */
+    -webkit-backdrop-filter: blur(8px); /* stöd för Safari */
+    padding-top: 60px;             /* Space from header */
+    z-index: 999;                  /* On top of everything */
+  }
+
+  .nav-links li {
+    margin: 20px auto;             /* Space and center links */
+    text-align: center;
+  }
+
+  .nav-links.show {
+    display: flex;                 /* Show when toggle is active */
+  }
+}
+
+/*Allt ovan har med headern att göra*/
+
+/* Nu gör jag lite kod för att bilden på me.html inte ska bli konstig på mindre skärmar.*/
+@media (max-width: 550px) {
+  .figure img {
+    margin-top: 50px;
+  }
+}
+
+/*Kommande kod gäller för report.html och gör den layouten responsiv*/
+
+/* Row layout using flexbox */
+.row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* 3 columns: main 50%, each aside 25% */
+.cols-1 .main {
+  flex: 1 1 100%;
+}
+.cols-1 .aside {
+  flex: 1 1 25%;
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 800px) {
+  .cols-1 { flex-wrap: wrap; }
+  .cols-1 .main  { order: 1; }
+  .cols-1 .aside { order: 2; }
+}
+
+/*Slut på den koden här*/
+
+/*Följande kod gäller för responsivitet på about.html sidan*/
+@media (max-width: 1570px) {
+  .cols-3 { flex-wrap: wrap; }
+  .cols-3 .main { flex: 1 100%; }
+  .cols-3 .main  { order: 1; }
+  .cols-3 .aside{ order: 2; }
+  .cols-3 .aside { order: 2; }
+}
+
+@media (max-width: 947px) {
+ .webtecbilder { 
+  width: auto; 
+  height: 599px;
+ }
+ .aside {
+  margin: auto;
+ }
+}
+
+@media (max-width: 817px) {
+ .webtecbilder { 
+  width: auto; 
+  height: 541px;
+ }
+}
+
+/*Här tar den koden slut*/
+
+/*Nu kommer koden för att göra om footern till att vara responsiv*/
+@media (max-width: 800px) {
+ .footer-triptych { flex-wrap: wrap; }
+ .footer-column { flex: 1 1 100%; text-align: center; }
+}

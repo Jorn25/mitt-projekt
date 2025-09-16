@@ -1,0 +1,166 @@
+
+@import url("header.css");
+@import url("footer.css");
+@import url("main.css");
+@import url("responsive-design.css");
+
+:root {
+  --color-bg-dark: #b1ab5d;        /* Mörk bakgrund */
+  --color-border: #a39b4e;         /* Accentkant */
+  --color-text-light: #ffe600;    /* Ljus text */
+  --color-text-hover: #665f00;     /* Hover-färg */
+  --color-footer-bg:  #745a2c;      /* Bakgrund för footer */
+  --color-main-bg: rgb(255, 250, 176) ;      /* Bakgrund för footer */
+}
+
+p{
+    font-size: 20px;
+}
+
+/*Nedan är lite kod som fixar den gamla designen från tidigare kmom*/
+.siteheader {
+    background-color: var(--color-bg-dark);
+    border-bottom: 2px solid #a39b4e;
+}
+
+.siteheader nav a {
+    color: #ffe600;
+}
+
+.siteheader span {
+  color: #ffe600;
+}
+
+.siteheader nav a:hover {
+    color: #665f00;
+    text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+.siteheader nav a {
+    text-decoration: none;
+    color: #f8f8f8;
+    background-color: rgba(0, 0, 0, 0.397);
+    padding: 5px 10px;
+     border-radius: 25px;
+    font-size: 2.3rem;
+    font-weight: bold;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+}
+
+.sitefooter {
+    border-top: 2px solid #a39b4e;
+    background-color: #745a2c;
+    color: #f9f9f9;
+}
+
+.footer-column {
+    background-color: #997745;
+}
+
+.footer-bottom {
+    border-top: 1px solid #ffd57b;
+}
+
+/*Ovan är lite kod som fixar den gamla designen från tidigare kmom*/
+
+.row {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.row.color1 {
+  background-color: rgb(255, 250, 176);
+}
+
+.row.cols1 .col {
+  flex: 1 1 100%;
+}
+
+.row.cols2 .col {
+  flex: 1 1 calc(50% - 1rem);
+}
+
+.row.cols3 .col {
+  flex: 1 1 33.333%;
+}
+
+.col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10rem;
+}
+
+.background {
+  min-height: 20rem;
+    background-image: url('../img/knossos13.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/*Nedan skiver jag den koden som gäller för  Kartan och "hitta hit" texten brevid kartan.*/
+
+.content {
+  align-self: flex-start;
+  padding: 20px;
+  width: 100%;
+}
+
+.karta{
+width: 100%;
+height: 500px;
+}
+/*Nu slutar koden för kartan och "hitta hit texten"*/
+
+/*Här är koden för de tre kolumnerna*/
+.row.rounded .col {
+  border-radius: 1rem;
+  background-color: white;
+}
+
+h4{
+     margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+/*Här slutar koden för de tre kolumnerna*/
+
+/*Här kommer koden för de fyra kollumnerna */
+.row {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.fyrakollumner{
+    background-color: var(--color-main-bg) !important;
+}
+/*Här slutar koden för de fyra kollumnerna */
+
+/*Här kommer koden för de skrollbara kollumnerna */
+.scroll {
+  overflow-x: auto;
+}
+
+.scroll .col {
+  min-width: 45%;
+}
+/*Här slutar koden för de skrollbara kollumnerna */
+
+/*Här är bara lite fixar för footern*/
+.minalänkar{
+    font-size:20px;
+     text-decoration: underline;
+     color: white;
+}
+
+.footer-column ul li a:hover {
+    color: #9c9c9c  !important; 
+    text-decoration: underline;
+}
