@@ -125,6 +125,14 @@ h4{
      margin-block-start: 0px;
     margin-block-end: 0px;
 }
+
+
+@media (max-width: 800px) {
+ .cols3 { flex-wrap: wrap; }
+ .content { flex: 1 1 100%; text-align: center; }
+}
+
+
 /*Här slutar koden för de tre kolumnerna*/
 
 /*Här kommer koden för de fyra kollumnerna */
